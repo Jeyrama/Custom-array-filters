@@ -43,3 +43,5 @@ Array.prototype.over = function(x){
 Array.prototype.inRange = function(min,max){
   return this.int().filter(function (x) { return x >= min && x <= max });
 }
+
+// or
