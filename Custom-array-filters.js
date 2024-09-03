@@ -17,3 +17,6 @@ And finally the filters should only accept integer values from an array, for exa
 
 Note: List with non-numbers will be tested as well.
 */
+
+
+// Solution
