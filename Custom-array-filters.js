@@ -45,3 +45,18 @@ Array.prototype.inRange = function(min,max){
 }
 
 // or
+
+filters = {
+  even:"x%2==0",
+  odd:"x%2==1",
+  under:"x<y",
+  over:"x>y",
+  inRange:"(y<=x)&&(x<=z)"  
+}
+
+for (f in filters) {
+  Array.prototype[f] = new Function("y","z",
+    "return this.filter(function(x){return "+
+    "typeof(x) == 'number' && x%1 === 0 &&" +
+    filters[f]+"})")  
+}
